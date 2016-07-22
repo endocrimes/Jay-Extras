@@ -6,6 +6,7 @@
 //
 //
 
+import Jay
 import Foundation
 
 //Useful methods for easier manipulation of type-safe JSON
