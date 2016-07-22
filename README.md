@@ -8,7 +8,7 @@
 [![Blog](https://img.shields.io/badge/blog-honzadvorsky.com-green.svg)](http://honzadvorsky.com)
 [![Twitter Czechboy0](https://img.shields.io/badge/twitter-czechboy0-green.svg)](http://twitter.com/czechboy0)
 
-Extras for [Jay](https://github.com/czechboy0/Jay).
+Extra conveniences for [Jay](https://github.com/czechboy0/Jay).
 
 Convenience subscripts, easier unwrapping.
 
@@ -31,4 +31,3 @@ MIT
 :alien: Author
 ------
 Honza Dvorsky - http://honzadvorsky.com, [@czechboy0](http://twitter.com/czechboy0)
-
