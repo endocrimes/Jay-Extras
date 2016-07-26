@@ -73,7 +73,7 @@ extension JSON {
 
 //Thanks for the inspiration for the following initializers, https://github.com/Zewo/JSON/blob/master/Source/JSON.swift
 
-extension JSON: BooleanLiteralConvertible {
+extension JSON: ExpressibleByBooleanLiteral {
   
     /// Create a `JSON` instance initialized to the provided `booleanLiteral`.
     public init(booleanLiteral value: BooleanLiteralType) {
@@ -81,7 +81,7 @@ extension JSON: BooleanLiteralConvertible {
     }
 }
 
-extension JSON: IntegerLiteralConvertible {
+extension JSON: ExpressibleByIntegerLiteral {
   
     /// Create a `JSON` instance initialized to the provided `integerLiteral`.
     public init(integerLiteral value: IntegerLiteralType) {
@@ -89,7 +89,7 @@ extension JSON: IntegerLiteralConvertible {
     }
 }
 
-extension JSON: FloatLiteralConvertible {
+extension JSON: ExpressibleByFloatLiteral {
   
     /// Create a `JSON` instance initialized to the provided `floatLiteral`.
     public init(floatLiteral value: FloatLiteralType) {
@@ -97,7 +97,7 @@ extension JSON: FloatLiteralConvertible {
     }
 }
 
-extension JSON: StringLiteralConvertible {
+extension JSON: ExpressibleByStringLiteral {
   
     /// Create a `JSON` instance initialized to the provided `unicodeScalarLiteral`.
     public init(unicodeScalarLiteral value: Swift.String) {
@@ -116,5 +116,20 @@ extension JSON: StringLiteralConvertible {
     }
 }
 
+extension JSON: ExpressibleByArrayLiteral {
+    public init(arrayLiteral elements: JSON...) {
+        self = .array(elements)
+    }
+}
+
+extension JSON: ExpressibleByDictionaryLiteral {
+    public init(dictionaryLiteral elements: (String, JSON)...) {
+        var items: [String: JSON] = [:]
+        for pair in elements {
+            items[pair.0] = pair.1
+        }
+        self = .object(items)
+    }
+}
 
 
