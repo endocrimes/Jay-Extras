@@ -17,7 +17,7 @@ Convenience subscripts, easier unwrapping.
 ## Swift Package Manager
 
 ```swift
-.Package(url: "https://github.com/czechboy0/Jay-Extras.git", majorVersion: 0, minor: 15)
+.Package(url: "https://github.com/czechboy0/Jay-Extras.git", majorVersion: 0, minor: 16)
 ```
 
 :gift_heart: Contributing
