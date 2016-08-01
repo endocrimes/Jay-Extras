@@ -74,14 +74,12 @@ extension JSON {
 //Thanks for the inspiration for the following initializers, https://github.com/Zewo/JSON/blob/master/Source/JSON.swift
 
 extension JSON: ExpressibleByNilLiteral {
-    
     public init(nilLiteral: ()) {
         self = .null
     }
 }
 
 extension JSON: ExpressibleByBooleanLiteral {
-    
     /// Create a `JSON` instance initialized to the provided `booleanLiteral`.
     public init(booleanLiteral value: BooleanLiteralType) {
         self = .boolean(value)
@@ -89,7 +87,6 @@ extension JSON: ExpressibleByBooleanLiteral {
 }
 
 extension JSON: ExpressibleByIntegerLiteral {
-    
     /// Create a `JSON` instance initialized to the provided `integerLiteral`.
     public init(integerLiteral value: IntegerLiteralType) {
         self = .number(.integer(value))
@@ -97,7 +94,6 @@ extension JSON: ExpressibleByIntegerLiteral {
 }
 
 extension JSON: ExpressibleByFloatLiteral {
-    
     /// Create a `JSON` instance initialized to the provided `floatLiteral`.
     public init(floatLiteral value: FloatLiteralType) {
         self = .number(.double(value))
@@ -105,7 +101,6 @@ extension JSON: ExpressibleByFloatLiteral {
 }
 
 extension JSON: ExpressibleByStringLiteral {
-    
     /// Create a `JSON` instance initialized to the provided `unicodeScalarLiteral`.
     public init(unicodeScalarLiteral value: Swift.String) {
         self = .string(value)
